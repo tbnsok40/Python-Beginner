@@ -1,0 +1,45 @@
+
+# b = [1,2,3,4,5,6,7]
+# def sum_list(list):
+#     if len(list) == 0:
+#         return
+#     else:
+#         return list[0] + sum_list(list[1:])
+#
+# print(sum_list(b))
+# 위 코드는 list[0]은 int 형이고 sum_list(list[1:])은 리스트이기 때문에 더할 수가 없어요.,.
+#######아래로 수정#######
+
+b = [1,2,3,4,5,6,7]
+def sum_list(list):
+    if len(list) == 1:
+        return list[0]
+    else:
+        return list[0] + sum_list(list[1:])
+
+print(sum_list(b))
+
+################
+# def sum_eachnum(n):
+#     if n == 0:
+#         return 0
+#     else:
+#         str_n = str(n)
+#         return int(str_n[0]) + sum_eachnum(int(str_n[1:]))
+# 
+# 
+# print(sum_eachnum(1234))
+# 그리고 아래코드는 1234가 들어가면 234, 34, 4순으로
+# sum_eachnum(n)이 실행될텐데.. 
+# 4가 들어갔을 때 return 이 되거나 해야할텐데 n == 0 이라는건 
+# 4가 return 이 되기 위한 조건이 아닌 것 같아요..
+#########아래로 수정##########
+def sum_eachnum(n):
+    if n < 10:
+        return n
+    else:
+        str_n = str(n)
+        return int(str_n[0]) + sum_eachnum(int(str_n[1:]))
+
+
+print(sum_eachnum(1234))
