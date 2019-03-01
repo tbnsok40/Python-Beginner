@@ -1,0 +1,25 @@
+```python```
+
+def linear_search(element, some_list):
+    n = len(some_list)
+    for i in range(n):
+        if element == some_list[i]:
+            return i
+        else:
+            continue
+    return None
+
+print(linear_search(2, [2, 3, 5, 7, 11]))
+print(linear_search(0, [2, 3, 5, 7, 11]))
+print(linear_search(5, [2, 3, 5, 7, 11]))
+print(linear_search(3, [2, 3, 5, 7, 11]))
+print(linear_search(11, [2, 3, 5, 7, 11]))
+
+def linear_search(element, some_list):
+    for i in range(len(some_list)):
+        if some_list[i] == element:
+            return i
+    return None
+
+range함수 안에서 lenth를 정의해버리기.
+if조건에서 else는 고려하지말고 바로 return문 돌리기.
